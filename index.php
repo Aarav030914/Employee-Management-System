@@ -38,10 +38,16 @@ if(isset($_POST['myButton'])){
         echo "LOGIN FAILED";
     }
     else{
-?>
-
-        <meta http-equiv = "refresh" content = "0; url = Employer Dashboard/home.html"/>;
-<?php
+      if($username=='admin' && $pwd=='admin@123'){
+          ?>
+          <meta http-equiv = "refresh" content = "0; url = Employer Dashboard/home.html"/>;
+          <?php
+        }
+        else{
+          ?>
+          <meta http-equiv = "refresh" content = "0; url = Employee Dashboard/dashboard.html"/>;
+          <?php
+        }
     }
 }
 ?>

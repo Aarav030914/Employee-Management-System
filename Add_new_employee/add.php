@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Login Page</title>
-  <link rel="stylesheet" href="./style_add.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-</head>
-<body>
-<div id="outer">
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./style_add.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
     <form>
         <div class="form-field">
-            <input type="name" placeholder="Employee's Name" required/>
+            <input type="name" name='name1' placeholder="Employee's Name" required />
         </div>
 
         <div class="form-field">
-            <input type="email" placeholder="Mail ID" required/>
+            <input type="email" name='mailid' placeholder="Mail ID" required />
         </div>
 
         <div class="form-field">
-            <input type="number" placeholder="Contact Number" required/>
+            <input type="number" name='contact' placeholder="Contact Number" required />
 
         </div>
         <div class="form-field">
-            <select class="domains">
+            <select class="domains" name='department'>
                 <option class="dropdown-item">Select Department</option>
                 <option class="dropdown-item">IT</option>
                 <option class="dropdown-item">HR</option>
@@ -32,44 +32,42 @@
                 <option class="dropdown-item">Marketing</option>
                 <option class="dropdown-item">Business Development</option>
             </select>
-        
+
         </div>
         <div class="form-field">
-            <input type="text" placeholder="Joining Date" required/>  
+            <input type="text" name='date' placeholder="Joining Date" required />
         </div>
         <div class="form-field">
-            <input type="password" placeholder="Password" required/>
-            
-        </div>
-            <div class="form-field">
-            <input type="password" placeholder="Confirm-Password" required/>
+            <input type="password" name='password' placeholder="Password" required />
         </div>
         <div class="form-field">
-        <button class="btn" name="save" type="submit">Submit</button>
+            <input type="password" name='confirm_password' placeholder="Confirm-Password" required />
+        </div>
+        <div class="form-field">
+            <button class="btn" name='save' type="submit">Submit</button>
         </div>
     </form>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
+
 </html>
 
 <?php
 include("connection.php");
 if (isset($_POST['save'])) {
-    $name=$_POST['name'];
-    $mailid=$_POST['mailid'];
-    $contact=$_POST['contact'];
-    $department=$_POST['department'];
-    $date=$_POST['date'];
-    $password=$_POST['password'];
-    $confirm_password=$_POST['confirm_password'];
-    echo "Running";
+    $name = $_POST['name1'];
+    $mailid = $_POST['mailid'];
+    $contact = $_POST['contact'];
+    $department = $_POST['department'];
+    $date = $_POST['date'];
+    $password = $_POST['password'];
+    $confirm_password = $_POST['confirm_password'];
     $query = "INSERT INTO new_entry (emp_name,emp_id, emp_number, emp_department, emp_date, emp_password, emp_confirm_password) VALUES('$name','$mailid','$contact','$department','$date','$password','$confirm_password')";
-    $data= mysqli_query($conn,$query);
-    if($data){
+    $data = mysqli_query($conn, $query);
+    echo "Running";
+    if ($data) {
         echo "Data saved into DataBase";
-    }
-    else{
+    } else {
         echo "Failed to save data";
     }
 }
