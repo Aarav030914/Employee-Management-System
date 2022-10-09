@@ -9,7 +9,7 @@
     <title>Employee List</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark px-4">
+    <nav class="navbar navbar-expand-lg px-4">
         <span class="navbar-brand text-light">Employee List</span>
         <a href="../Add_new_employee/add.html" class="ms-auto">
             <svg class="add-employee text-light" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
@@ -32,9 +32,9 @@
 </html>
 <?php
     $host = 'localhost';
-    $username = 'id19679193_admn';
-    $password = "9GlZ[<9h*OaZ)#6D";
-    $db_name = 'id19679193_add_new_employee';
+    $username = 'root';
+    $password = "";
+    $db_name = 'Employer Dashboard';
     $conn = mysqli_connect($host, $username, $password, $db_name);
     $resultset = mysqli_query($conn, "SELECT* from form");
     $json_array = array();

@@ -7,8 +7,12 @@
     transform: scale(1.5);
 }
 .home{
-    margin-right: 2em;
+    margin-right: 1em;
     transform: scale(1.5);
+}
+.create-tasks-icon{
+    transform: scale(1.5);
+    margin-right: 1em;
 }
 .task-box{
     padding:2em;
