@@ -54,3 +54,24 @@
 </div>
 </body>
 </html>
+<?php
+include("connection.php");
+if (isset($_POST['save'])) {
+    $name=$_POST['name'];
+    $mailid=$_POST['mailid'];
+    $contact=$_POST['contact'];
+    $department=$_POST['department'];
+    $date=$_POST['date'];
+    $password=$_POST['password'];
+    $confirm_password=$_POST['confirm_password'];
+    $query = "INSERT INTO form (emp_name,emp_id, emp_number, emp_department, emp_date, emp_password, emp_confirm_password) VALUES('$name','$mailid','$contact','$department','$date','$password','$confirm_password')";
+    echo "Running";
+    $data= mysqli_query($conn,$query);
+    if($data){
+        echo "Data saved into DataBase";
+    }
+    else{
+        echo "Failed to save data";
+    }
+}
+?>
