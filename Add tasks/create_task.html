@@ -34,23 +34,31 @@
     <form method="POST">
         <div>
             <div class="form-field">
-            <input type="username" name="username" placeholder="Username" required/>
+                <label>Username:
+                    <input class="input-fields" type="username" name="username" placeholder="Username" required/>
+                </label>
             </div>
             
             <div class="form-field">
-                <label>Date of Allotment
-                    <input type="date" name="start-date" placeholder="Date of Allotment" required/>
+                <label>Description:
+                    <input class="input-fields" type="text" name="description" placeholder="Task Description" required/>
+                </label>
+            </div>
+            
+            <div class="form-field">
+                <label>Date of Allotment:
+                    <input class="input-fields" type="date" name="start-date" placeholder="Date of Allotment" required/>
                 </label>
             </div>
 
             <div class="form-field">
-                <label>Deadline
-                    <input type="date" name="end-date" placeholder="Deadline" required/>
+                <label>Deadline:
+                    <input class="input-fields" type="date" name="end-date" placeholder="Deadline" required/>
                 </label>
             </div>
             
             <div class="form-field">
-            <button class="btn" name="myButton" id="myButton">Create</button>
+                <button class="btn btn-primary" name="myButton" id="myButton">Create</button>
             </div>
         </div>
 
