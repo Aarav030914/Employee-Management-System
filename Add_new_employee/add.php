@@ -45,10 +45,32 @@
             <input type="password" placeholder="Confirm-Password" required/>
         </div>
         <div class="form-field">
-        <button class="btn" type="submit">Submit</button>
+        <button class="btn" name="save" type="submit">Submit</button>
         </div>
     </form>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
+
+<?php
+include("connection.php");
+if (isset($_POST['save'])) {
+    $name=$_POST['name'];
+    $mailid=$_POST['mailid'];
+    $contact=$_POST['contact'];
+    $department=$_POST['department'];
+    $date=$_POST['date'];
+    $password=$_POST['password'];
+    $confirm_password=$_POST['confirm_password'];
+    echo "Running";
+    $query = "INSERT INTO new_entry (emp_name,emp_id, emp_number, emp_department, emp_date, emp_password, emp_confirm_password) VALUES('$name','$mailid','$contact','$department','$date','$password','$confirm_password')";
+    $data= mysqli_query($conn,$query);
+    if($data){
+        echo "Data saved into DataBase";
+    }
+    else{
+        echo "Failed to save data";
+    }
+}
+?>
