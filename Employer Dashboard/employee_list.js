@@ -1,34 +1,3 @@
-// let employees = [
-//     {
-//         name:"Aarav_1",
-//         mail_id:"aarav1@gmail.com",
-//         contact_no:"123456789",
-//         department:"xyz1",
-//         joining_date:"13Feb 2018"  
-//     },
-//     {
-//         name:"Aarav_2",
-//         mail_id:"aarav2@gmail.com",
-//         contact_no:"123456789",
-//         department:"xyz2",
-//         joining_date:"14Feb 2018"  
-//     },
-//     {
-//         name:"Aarav_3",
-//         mail_id:"aarav3@gmail.com",
-//         contact_no:"123456789",
-//         department:"xyz3",
-//         joining_date:"15Feb 2018"  
-//     },
-//     {
-//         name:"Aarav_4",
-//         mail_id:"aarav4@gmail.com",
-//         contact_no:"123456789",
-//         department:"xyz4",
-//         joining_date:"16Feb 2018"  
-//     }
-
-// ];
 fetch("./myfile.json").then(response => response.json())
 .then(data => {
     const employee_info = document.getElementsByClassName('box')[0];
