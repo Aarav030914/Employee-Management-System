@@ -29,6 +29,7 @@
 
 <?php
 include("connection.php");
+echo "Running";
 if (isset($_POST['save'])) {
     $name=$_POST['name'];
     $mailid=$_POST['mailid'];
@@ -37,8 +38,7 @@ if (isset($_POST['save'])) {
     $date=$_POST['date'];
     $password=$_POST['password'];
     $confirm_password=$_POST['confirm_password'];
-    $query = "INSERT INTO form (emp_name,emp_id, emp_number, emp_department, emp_date, emp_password, emp_confirm_password) VALUES('$name','$mailid','$contact','$department','$date','$password','$confirm_password')";
-    // echo "Running";
+    $query = "INSERT INTO new_entry (emp_name,emp_id, emp_number, emp_department, emp_date, emp_password, emp_confirm_password) VALUES('$name','$mailid','$contact','$department','$date','$password','$confirm_password')";
     $data= mysqli_query($conn,$query);
     if($data){
         echo "Data saved into DataBase";

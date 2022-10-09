@@ -1,3 +1,6 @@
+body{
+    background-color: #8ecae6;
+}
 .profile-image{
     border-radius: 100%;
     width: 30px;
@@ -7,10 +10,14 @@
     transform: scale(1.5);
 }
 .box{
+    background-color: #023047;
+    border-radius: 1em;
     margin-top: 10%;
     width: 40%;
 }
 .box a{
+    color: aliceblue;
+    border-radius: 1em;
     font-size: 2em;
     height: 50px;
     text-decoration:none;
@@ -18,9 +25,12 @@
     display: block;
 }
 .box a:hover{
-    background-color: green;
+    background-color: #219ebc;
 }
 .add-tasks-link{
     margin-right: 1.5em;
     transform: scale(1.5);
+}
+.navbar{
+    background-color: #023047;
 }

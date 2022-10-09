@@ -9,7 +9,7 @@
     <title>Employee List</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark px-4">
+    <nav class="navbar navbar-expand-lg px-4">
         <span class="navbar-brand text-light">Employee List</span>
         <a href="../Add_new_employee/form.php" class="ms-auto">
             <svg class="add-employee text-light" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">

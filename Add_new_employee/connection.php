@@ -7,7 +7,7 @@ $username = "root";
 $password = "";
 $dbname = "employee";
 $conn=mysqli_connect($servername,$username,$password);
-mysqli_select_db($conn,'id19679193_add_new_employee');
+mysqli_select_db($conn,'employee');
 if($conn){
     echo "Connection OK";
 }

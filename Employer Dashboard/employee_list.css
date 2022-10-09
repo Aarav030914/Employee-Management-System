@@ -1,3 +1,6 @@
+body{
+    background-color: #8ecae6;
+}
 .profile-image{
     border-radius: 100%;
     width: 30px;
@@ -11,15 +14,22 @@
     transform: scale(1.5);
 }
 .employee{
+    padding: 2%;
     margin-top: 1%;
-    border: 10px solid green;
     width: 50%;
-    background-color: aqua;
+    background-color: #ffb703;
     text-align: center;
     border-radius: 2em;
 }
 .box{
+    padding: 1%;
+    background-color: white;
     margin-top: 0.5em;
-    border: 10px solid black;
     border-radius: 2em;
+}
+.navbar{
+    background-color: #023047;
+}
+p{
+    font-size: 1.25em;
 }
