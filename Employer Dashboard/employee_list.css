@@ -1,0 +1,25 @@
+.profile-image{
+    border-radius: 100%;
+    width: 30px;
+    margin-left: 20px;
+}
+.bell-icon{
+    transform: scale(1.5);
+}
+.add-employee{
+    margin-right: 20px;
+    transform: scale(1.5);
+}
+.employee{
+    margin-top: 1%;
+    border: 10px solid green;
+    width: 50%;
+    background-color: aqua;
+    text-align: center;
+    border-radius: 2em;
+}
+.box{
+    margin-top: 0.5em;
+    border: 10px solid black;
+    border-radius: 2em;
+}

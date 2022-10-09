@@ -1,0 +1,26 @@
+.profile-image{
+    border-radius: 100%;
+    width: 30px;
+    margin-left: 20px;
+}
+.bell-icon{
+    transform: scale(1.5);
+}
+.box{
+    margin-top: 10%;
+    width: 40%;
+}
+.box a{
+    font-size: 2em;
+    height: 50px;
+    text-decoration:none;
+    text-align: center;
+    display: block;
+}
+.box a:hover{
+    background-color: green;
+}
+.add-tasks-link{
+    margin-right: 1.5em;
+    transform: scale(1.5);
+}

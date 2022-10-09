@@ -1,0 +1,23 @@
+.profile-image{
+    border-radius: 100%;
+    width: 30px;
+    margin-left: 20px;
+}
+.bell-icon{
+    transform: scale(1.5);
+}
+.home{
+    margin-right: 2em;
+    transform: scale(1.5);
+}
+.task-box{
+    padding:2em;
+    margin-top: 5%;
+    border: 10px solid black;
+    border-radius: 0.5em;
+    width: 50%;
+}
+.task{
+    border-radius: 0.5em;
+    border: 10px solid blue;
+}
