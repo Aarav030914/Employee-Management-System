@@ -7,21 +7,21 @@
 
 </head>
 <body>
-<div id="bg"></div>
+  <div id="bg"></div>
 
-<form action="#" autocomplete="off" method="POST">
-  <div class="form-field">
-    <input type="username" name="username" placeholder="Username" required/>
-  </div>
-  
-  <div class="form-field">
-    <input type="password" name="password" placeholder="Password" required/>
-  </div>
-  
-  <div class="form-field">
-    <button class="btn" name="myButton" id="myButton">Log in</button>
-  </div>
-</form>
+  <form action="#" autocomplete="off" method="POST">
+    <div class="form-field">
+      <input type="username" name="username" placeholder="Username" required/>
+    </div>
+    
+    <div class="form-field">
+      <input type="password" name="password" placeholder="Password" required/>
+    </div>
+    
+    <div class="form-field">
+      <button class="btn" name="myButton" id="myButton">Log in</button>
+    </div>
+  </form>
 </body>
 </html>
 

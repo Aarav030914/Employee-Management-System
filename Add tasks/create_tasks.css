@@ -1,0 +1,29 @@
+body{
+    background-color: #8ecae6;
+}
+.profile-image{
+    border-radius: 100%;
+    width: 30px;
+    margin-left: 20px;
+}
+.bell-icon{
+    transform: scale(1.5);
+}
+.home{
+    transform: scale(1.5);
+}
+.add-tasks-link{
+    transform: scale(1.5);
+}
+form{
+    display: flex;
+    font-family: 'Lato', sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+.form-field{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
