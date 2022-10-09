@@ -40,7 +40,7 @@ if(isset($_POST['myButton'])){
     else{
 ?>
 
-        <meta http-equiv = "refresh" content = "0; url = "/>;
+        <meta http-equiv = "refresh" content = "0; url = Employer Dashboard/home.html"/>;
 <?php
     }
 }
