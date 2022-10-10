@@ -6,7 +6,7 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "employee";
-$conn=mysqli_connect($servername,$username,$password);
+$conn= mysqli_connect($servername,$username,$password);
 mysqli_select_db($conn,$dbname);
 if($conn){
     echo "Connection OK";

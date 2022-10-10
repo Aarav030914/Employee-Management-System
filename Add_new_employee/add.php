@@ -9,9 +9,9 @@
 </head>
 
 <body>
-    <form>
+    <form method="post">
         <div class="form-field">
-            <input type="name" name='name1' placeholder="Employee's Name" required />
+            <input type="username" name='name' placeholder="Employee's Name" required />
         </div>
 
         <div class="form-field">
@@ -41,10 +41,10 @@
             <input type="password" name='password' placeholder="Password" required />
         </div>
         <div class="form-field">
-            <input type="password" name='confirm_password' placeholder="Confirm-Password" required />
+            <input type="password" name='confirm_password' placeholder="Confirm Password" required />
         </div>
         <div class="form-field">
-            <button class="btn" name='save' type="submit">Submit</button>
+        <button class="btn" name='submit' type="submit">Submit</button>
         </div>
     </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
@@ -54,20 +54,22 @@
 
 <?php
 include("connection.php");
-if (isset($_POST['save'])) {
-    $name = $_POST['name1'];
-    $mailid = $_POST['mailid'];
-    $contact = $_POST['contact'];
-    $department = $_POST['department'];
-    $date = $_POST['date'];
-    $password = $_POST['password'];
-    $confirm_password = $_POST['confirm_password'];
-    $query = "INSERT INTO new_entry (emp_name,emp_id, emp_number, emp_department, emp_date, emp_password, emp_confirm_password) VALUES('$name','$mailid','$contact','$department','$date','$password','$confirm_password')";
-    $data = mysqli_query($conn, $query);
+if (isset($_POST['submit'])){
+    $name=$_POST['name'];
+    $mailid=$_POST['mailid'];
+    $contact=$_POST['contact'];
+    $department=$_POST['department'];
+    $date=$_POST['date'];
+    $password=$_POST['password'];
+    $confirm_password=$_POST['confirm_password'];
     echo "Running";
-    if ($data) {
+    $query = "INSERT INTO new_entry (emp_name, emp_id, emp_number, emp_department, emp_date, emp_password, emp_confirm_password) VALUES('$name','$mailid','$contact','$department','$date','$password','$confirm_password')";
+    
+    $data= mysqli_query($conn,$query);
+    if($data){
         echo "Data saved into DataBase";
-    } else {
+    }
+    else{
         echo "Failed to save data";
     }
 }

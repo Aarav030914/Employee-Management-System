@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="./create_tasks.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="./create_tasks.css"> -->
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark px-4">
+    <!-- <nav class="navbar navbar-expand-lg bg-dark px-4">
         <span class="navbar-brand text-light">Create Tasks</span>
         <a href="../Employee Dashboard/dashboard.html" class="home text-light ms-auto">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
@@ -30,12 +30,12 @@
         </a>
         
         <img src="../Images/download.png" alt="" class="profile-image">
-    </nav>
-    <form method="POST">
+    </nav> -->
+    <form method="post">
         <div>
             <div class="form-field">
                 <label>Username:
-                    <input class="input-fields" type="username" name="username" placeholder="Username" required/>
+                    <input class="input-fields" type="text" name="username" placeholder="Username" required/>
                 </label>
             </div>
             
@@ -47,39 +47,45 @@
             
             <div class="form-field">
                 <label>Date of Allotment:
-                    <input class="input-fields" type="date" name="start-date" placeholder="Date of Allotment" required/>
+                    <input class="input-fields" type="text" name="date" placeholder="Date of Allotment" required/>
                 </label>
             </div>
 
             <div class="form-field">
-                <label>Deadline:
-                    <input class="input-fields" type="date" name="end-date" placeholder="Deadline" required/>
+                <label>Start-Time
+                    <input class="input-fields" type="text" name="start_time" required/>
+                </label>
+            </div>
+            <div class="form-field">
+                <label>End-Time
+                    <input class="input-fields" type="text" name="end_time" required/>
                 </label>
             </div>
             
             <div class="form-field">
-                <button class="btn btn-primary" name="myButton" id="myButton">Create</button>
+            <button name='submit' type="submit">Submit</button>
             </div>
         </div>
-
     </form>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
 <?php
 include("connection.php");
-if (isset($_POST['submit'])) {
-    $id=$_POST['id'];
-    $task=$_POST['task_description'];
-    $date1 = $_POST['date_of_assign'];
-    $start_time = $_POST['start-time'];
-    $end_time = $_POST['end-time'];
-    $query = "INSERT INTO task (id,task,date1,start_time,end_time) VALUES('$emp_id','$description','$date','$start','$end')";
+
+if (isset($_POST['submit'])){
+    echo "running";
+    $id=$_POST['username'];
+    $task_description=$_POST['description'];
+    $datel = $_POST['date'];
+    $start_time = $_POST['start_time'];
+    $end_time = $_POST['end_time'];
+    $query = "INSERT INTO task (id, task_description, datel, start_time, end_time) VALUES ('$emp_id','$description','$date','$start','$end')";
     $data = mysqli_query($conn, $query);
-    echo "Running";
     if ($data) {
         echo "Data saved into DataBase";
-    } else {
+    } 
+    else {
         echo "Failed to save data";
     }
 }
