@@ -24,8 +24,15 @@ body{
     border-radius: 0.5em;
     width: 50%;
 }
-.task{
+.task_data{
+    margin-top: 20px;
+    margin-bottom: 20px;
     padding: 2%;
     border-radius: 0.5em;
     background-color: #ffb703;
+}
+.input-username{
+    margin-left: 20px;
+    margin-top: 20px;
+    border: none;
 }
