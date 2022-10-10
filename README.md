@@ -1,10 +1,10 @@
 # Employee-Management-System
-## Contributors:\
+## Contributors:
 Aarav Jain\
-Chandan Rakholia\
-## Default Administrator Credentials:\
+Chandan Rakholia
+## Default Administrator Credentials:
 Username: admin\
-Password: admin@123\
-## Default Employee Credentials:\
+Password: admin@123
+## Default Employee Credentials:
 Username: chandan\
 Password: chandan
