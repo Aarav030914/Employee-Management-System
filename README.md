@@ -2,7 +2,6 @@
 Contributors:\
 Aarav Jain\
 Chandan Rakholia\
-
 Default Administrator Credentials:\
 Username: admin\
 Password: admin@123\
