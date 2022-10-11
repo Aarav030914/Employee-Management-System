@@ -10,3 +10,5 @@ Username: chandan\
 Password: chandan\
 ## Link of the Hosted Website:
 http://employees-data-management.epizy.com/
+## Recommended Browser to view the website
+FireFox
